@@ -1,16 +1,16 @@
-
 # Dependencies
 node_modules/
 
-# Next.js build output
+# Next.js
 .next/
 out/
 
-# Production builds
+
+# Production
 build/
 dist/
 
-# Environment files (keep the example template)
+# Environment variables
 .env
 .env.local
 .env.development.local
@@ -19,32 +19,35 @@ dist/
 !.env.example
 
 # Logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Test and coverage output
+# Coverage
 coverage/
-.nyc_output/
 .early.coverage
 
-# TypeScript and tooling caches
+# TypeScript
 *.tsbuildinfo
-.eslintcache
-.turbo/
+
+# Cache
 .cache/
+.turbo/
+.eslintcache
 
 # Vercel
 .vercel/
 
-# IDE settings
+# IDE
 .idea/
 .vscode/
-*.iml
+.agents/
 
-# Operating system files
+# OS
 .DS_Store
 Thumbs.db
-Desktop.ini
+
+# Misc
+*.swp
+*.swo
