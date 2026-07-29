@@ -1,0 +1,4 @@
+import { NextResponse } from "next/server";
+import { z } from "zod";
+const schema=z.object({name:z.string().min(2),phone:z.string().min(7),email:z.string().email().or(z.literal("")),service:z.string().min(2),message:z.string().min(10),preferredContact:z.string().min(2)});
+export async function POST(req:Request){try{const data=schema.parse(await req.json()); if(process.env.RESEND_API_KEY&&process.env.CONTACT_EMAIL){const {Resend}=await import("resend"); const resend=new Resend(process.env.RESEND_API_KEY); await resend.emails.send({from:"1Click Website <onboarding@resend.dev>",to:process.env.CONTACT_EMAIL,subject:`New ${data.service} enquiry from ${data.name}`,text:`Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\nPreferred contact: ${data.preferredContact}\n\n${data.message}`});} return NextResponse.json({ok:true});}catch{return NextResponse.json({error:"Please check the form and try again."},{status:400});}}

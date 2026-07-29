@@ -1,0 +1,2 @@
+import type { MetadataRoute } from "next";
+export default function sitemap():MetadataRoute.Sitemap{const base=process.env.NEXT_PUBLIC_SITE_URL||"http://localhost:3000";return ["","/about","/services/funeral-services","/services/vaults-mausoleums","/services/events","/services/photography-videography","/portfolio","/testimonials","/resources","/contact"].map(url=>({url:base+url,lastModified:new Date()}));}

@@ -1,0 +1,2 @@
+export const metadata={title:"Testimonials"};
+export default function Testimonials(){return <section className="mx-auto max-w-6xl px-5 py-24 md:px-10 md:py-32"><p className="eyebrow text-bronze">Client words</p><h1 className="display mt-5 text-7xl">Trust should be earned.</h1><div className="mt-16 border-y rule py-16 text-center"><p className="display text-4xl text-ink/50">“[Add approved client testimonial]”</p><p className="mt-6 text-xs uppercase tracking-widest">Sample content · not a client quote</p></div></section>}

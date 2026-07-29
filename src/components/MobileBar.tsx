@@ -1,0 +1,2 @@
+import { MessageCircle, Phone, Send } from "lucide-react";
+export function MobileBar(){return <div className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-3 overflow-hidden bg-ivory shadow-2xl md:hidden"><a href="#contact" className="flex flex-col items-center gap-1 py-3 text-xs"><Phone size={18}/>Call</a><a href="#contact" className="flex flex-col items-center gap-1 border-x rule py-3 text-xs"><MessageCircle size={18}/>WhatsApp</a><a href="/contact" className="flex flex-col items-center gap-1 bg-bronze py-3 text-xs text-white"><Send size={18}/>Enquire</a></div>}
